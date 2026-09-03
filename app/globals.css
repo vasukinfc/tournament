@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+@utility scrollbar-thin { scrollbar-width: thin; }
+@utility scrollbar-none { scrollbar-width: none; &::-webkit-scrollbar { display: none; } }
+@utility scrollbar-gutter-stable { scrollbar-gutter: stable; }
+
+:root {
+  --background: #0c0f14;
+  --foreground: #f4f7fb;
+  --card: #12161d;
+  --card-foreground: #f4f7fb;
+  --popover: #171c24;
+  --popover-foreground: #f4f7fb;
+  --primary: #d7ff3f;
+  --primary-foreground: #11150a;
+  --secondary: #1a2029;
+  --secondary-foreground: #f4f7fb;
+  --muted: #181d25;
+  --muted-foreground: #8f98a7;
+  --accent: #222a35;
+  --accent-foreground: #f4f7fb;
+  --destructive: #ff5c5c;
+  --border: #252c36;
+  --input: #2d3541;
+  --ring: #d7ff3f;
+  --chart-1: #d7ff3f;
+  --chart-2: #7dd3fc;
+  --chart-3: #ff5c35;
+  --chart-4: #a78bfa;
+  --chart-5: #fbbf24;
+  --radius: .8rem;
+  --sidebar: #090b0f;
+  --sidebar-foreground: #f4f7fb;
+  --sidebar-primary: #d7ff3f;
+  --sidebar-primary-foreground: #11150a;
+  --sidebar-accent: #151a21;
+  --sidebar-accent-foreground: #f4f7fb;
+  --sidebar-border: #1e242d;
+  --sidebar-ring: #d7ff3f;
+}
+
+@theme inline {
+  --color-background: var(--background); --color-foreground: var(--foreground);
+  --color-card: var(--card); --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1); --color-chart-2: var(--chart-2); --color-chart-3: var(--chart-3); --color-chart-4: var(--chart-4); --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar); --color-sidebar-foreground: var(--sidebar-foreground); --color-sidebar-primary: var(--sidebar-primary); --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent); --color-sidebar-accent-foreground: var(--sidebar-accent-foreground); --color-sidebar-border: var(--sidebar-border); --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px); --radius-md: calc(var(--radius) - 2px); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+* { border-color: var(--border); }
+html { background: var(--background); }
+body { min-height: 100svh; background: var(--background); color: var(--foreground); font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(215,255,63,.28); color: white; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0c0f14; }
+::-webkit-scrollbar-thumb { border: 3px solid #0c0f14; border-radius: 999px; background: #313946; }
